@@ -1,4 +1,4 @@
-package real;
+package gms;
 
 public class Member {
 	String name; // 멤버변수는 초기화하면 안된다 
@@ -48,7 +48,7 @@ public class Member {
 		}		
 		return grade;
 	}
-	public String genderChecker(String number) {
+	public String genderChecker(String number) { //메인에서 한개로 받았으니 여기서도 한개로 받아라
 		String checker = "";
 		char cov = number.charAt(7);
 		switch(cov) {
@@ -59,4 +59,8 @@ public class Member {
 		}
 		return checker;
 	}
+	
+		
+		
 }
+

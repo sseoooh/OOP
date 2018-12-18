@@ -1,4 +1,4 @@
-package real;
+package gms;
 
 public class Lotto {
 	public String randomNum() {
