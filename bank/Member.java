@@ -1,17 +1,18 @@
 package bank;
 
 public class Member {
-	String id, name, ssn, pass;
-	Member(String id,
+	String id, name, ssn, pass; // 멤버변수
+	// 생성자 = 메소드 ->>외부에서 들어온 값을 내부멤버변수에 저장
+	Member(String id,	//메인클래스의 argment를 Member클래스의 파라미터에서 받는다 그리고 다시 this밑의 id에넣고 그게다시 this.id로 들어간다
 		   String name,
 	       String ssn,
-		   String pass){
+		   String pass){	//소괄호안까지는 파라미터
 		this.id = id;
 		this.name = name;
 		this.ssn = ssn;
 		this.pass = pass;
 	}
-	public String info() {
+	public String info() {	//멤버 메소드
 		
 		return String.format("[회원정보]\n"
 							+ "ID: %s\n"

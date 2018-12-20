@@ -1,5 +1,20 @@
 package bank;
 import java.util.Random;
+/*
+ * 계좌클래스
+ * [속성]
+ * 상수 : BANK_NAME
+ * 멤버변수 : 
+ * 1. accountNum 계좌번호
+ * 2. money 잔액
+ * 3. today 해당일
+ *[기능]
+ * 1. generationAccountNum() 계좌번호생성(랜덤)
+ * 2. today() 해당일생성
+ * 3. withdraw() 출금하기
+ * 4. deposit() 입금하기
+ * 5. info() 계좌정보
+ */
 import java.text.SimpleDateFormat;
 import java.util.Date;
 public class Account {
@@ -7,26 +22,27 @@ public class Account {
 		String accountNum;
 		int money;
 		String today;
+		
 		Account(int money){
 		this.accountNum = this.generatorAccountNum();
 		this.money = money;
 		this.today = this.today();
+		
+		
 	}
 	public String generatorAccountNum() {
 		String accountNum = "";
 		Random random = new Random();
-		int[] rn = new int[10];
-		String res ="";
+		
+		 
+		
 		for(int i=0;i<10;i++) {
-			rn[i] = random.nextInt(10);
-			if(i<4) {
-				res += i+"";
-			}else if(i==4) {
-				res += "-";
-			}else if(i<10){
-				res += i+"";
+			if(i==3) {
+				accountNum += random.nextInt(9)+"-";
+			}else {
+				accountNum += random.nextInt(9);
 			}
-			 accountNum = res;
+			
 		}
 		//1234-5678
 		return accountNum;
@@ -38,8 +54,20 @@ public class Account {
 		today = sdf.format(date);
 		return today;
 	}
-	
-	
+	/*
+	 * 출금하기
+	 */
+	public void withdraw(int money) {//<-------void가 디폴트다 //블락이없으면 아규먼트
+		this.money -= money;
+	}
+	/*
+	 * 입금하기
+	 */
+	public void deposit(int money) {
+		//String a = "";
+		this.money += money;
+		
+	}
 public String info1(String name) {
 		
 		return String.format("은행이름 %s\n"
@@ -47,6 +75,5 @@ public String info1(String name) {
 							+ "이 름: %s\n"
 							+ "날 짜: %s\n"
 							+ "잔 액 %s\n", BANK_NAME, accountNum, name, today, money);
-	
 }
 }
