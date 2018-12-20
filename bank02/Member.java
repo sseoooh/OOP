@@ -1,4 +1,4 @@
-package bank2;
+package bank02;
 
 public class Member {
 	String id, name, ssn, pass;

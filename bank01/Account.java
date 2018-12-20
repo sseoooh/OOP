@@ -1,5 +1,5 @@
-package bank1;
-
+package bank01;
+import java.util.Random;
 public class Account {
 	String accountNum, today;
 	int money;

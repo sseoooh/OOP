@@ -1,4 +1,4 @@
-package bank1;
+package bank01;
 
 public class Member {
 	String id, name, ssn, pass;		//클래스바로밑은 값을 안넣어줘되된다 여기만!	//<--- 멤버변수 or 인스턴스변수를 선언!	
