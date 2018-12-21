@@ -1,4 +1,4 @@
-package bank4;
+package bank03;
 
 public class Account {
 	final static String BANK_NAME = "국민은행";
@@ -8,27 +8,18 @@ public class Account {
 		this.today = this.today();
 		this.accountNum = this.generatorAccountNum();
 	}
-	/*
-	 * generatorAccountNum()
-today()
-withdraw()
-deposit()
-info()
-	 */
 	public String generatorAccountNum() {
-		String account = "";
-		return account;
+		String accountNum = "";
+		return accountNum;
 	}
 	public String today() {
 		String today = "";
 		return today;
 	}
 	public void withdraw() {}
-	public void accountNum() {}
+	public void deposit() {}
 	public String info() {
-		return String.format("[은행이름 %s\n"
-				+ "계좌번호 %s"
-				+ "날짜 %s"
-				+ "잔액 %s", BANK_NAME, accountNum, today, money);
+		String info = "";
+		return info;
 	}
 }

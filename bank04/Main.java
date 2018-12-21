@@ -1,4 +1,4 @@
-package bank3;
+package bank04;
 
 import javax.swing.JOptionPane;
 
@@ -7,9 +7,9 @@ public class Main {
 		while(true) {
 			switch(JOptionPane.showInputDialog("[메뉴]\n"
 					+ "0.종료\n"
-					+ "")) {
-			case "0" :
-				JOptionPane.showMessageDialog(null, "종료");
+					+ "1.회원가입\n")) {
+			case "0" : 
+			JOptionPane.showMessageDialog(null, "종료");	
 				return;
 			
 			}

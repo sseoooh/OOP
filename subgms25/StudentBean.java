@@ -2,31 +2,44 @@ package subgms25;
 
 public class StudentBean {
 	String hakbun, name, ssn, pass;
-	public void setHakbun(String hakbun) {
-		this.hakbun = hakbun;
-	}
+	
+	
 	public String getHakbun() {
 		return hakbun;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setHakbun(String hakbun) {
+		this.hakbun = hakbun;
 	}
 	public String getName() {
 		return name;
 	}
-	public void setSsn(String ssn) {
-		this.ssn = ssn;
+
+
+	public void setName(String name) {
+		this.name = name;
 	}
+
+
 	public String getSsn() {
 		return ssn;
 	}
-	public void setPass(String pass) {
-		this.pass = pass;
+
+
+	public void setSsn(String ssn) {
+		this.ssn = ssn;
 	}
+
+
 	public String getPass() {
 		return pass;
 	}
-	@Override
+
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+
 	public String toString() {
 		// TODO Auto-generated method stub
 		return String.format("학점: %s\n"

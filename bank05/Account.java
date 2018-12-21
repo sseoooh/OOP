@@ -1,4 +1,4 @@
-package bank5;
+package bank05;
 
 public class Account {
 	final static String BANK_NAME = "국민은행";

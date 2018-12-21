@@ -5,8 +5,8 @@ import javax.swing.JOptionPane;
 public class Main {
 	public static void main(String[] args) {
 		StudentBean studentBean = null;
-		SubjectService subjectService = null;
-		StudentService service =null;
+		StudentService service = new StudentService();
+		SubjectBean subjectBean = null;
 		while(true) {
 			switch(JOptionPane.showInputDialog("[메뉴]\n"
 					+ "0.종료	\n"
@@ -31,16 +31,25 @@ public class Main {
 				break;
 			case "2" :
 				break;
-			/*case "3" :
+			case "3" :
 				JOptionPane.showMessageDialog(null,studentBean.toString());
 				break;
 			case "4" :
-				service = new StudentService();
-				String record = JOptionPane.showInputDialog(StudentService.);
-				
-				break;
+				subjectBean = new SubjectBean();
+				String subjName = JOptionPane.showInputDialog("과목");
+				String profName = JOptionPane.showInputDialog("교수");
+				String score = JOptionPane.showInputDialog("학점");
+				subjectBean.setSubjName(subjName);
+				subjectBean.setProfName(profName);
+				subjectBean.setScore(Integer.parseInt(score));
+			break;
+			case "5" :
+				String record = service.ShowRecord(studentBean.getHakbun(),
+						studentBean.getName(),subjectBean.getSubjName(), subjectBean.getScore());//여기서왜 student로 바뀌는가?
+				JOptionPane.showMessageDialog(null, record);
+			break;
 			}
 		}
-	}
+	
 }
-*/
+}

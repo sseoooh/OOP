@@ -2,6 +2,7 @@ package subgms25;
 
 public class SubjectBean {
 	String subjName,profName;
+	int score;
 	public void setSubjName(String subjname) {
 		this.subjName = subjname;
 	}
@@ -13,6 +14,12 @@ public class SubjectBean {
 	}
 	public String getProfName() {
 		return profName;
+	}
+	public void setScore(int score) {
+		this.score = score;
+	}
+	public int getScore() {
+		return score;
 	}
 	@Override
 	public String toString() {

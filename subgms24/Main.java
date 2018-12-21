@@ -47,7 +47,6 @@ public class Main {
 			subjnamebean.setScore(Integer.parseInt(score));
 			break;
 			case "5" :
-			
 			String recode = subjectService.showRecord(student.getHakBun(),
 					student.getName(),subjnamebean.getsubjName(),subjnamebean.getScore());
 			JOptionPane.showMessageDialog(null, recode);
