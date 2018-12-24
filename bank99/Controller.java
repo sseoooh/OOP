@@ -1,11 +1,10 @@
-package bank31;
+package bank99;
 
 import javax.swing.JOptionPane;
 
 public class Controller {
 	
 	public static void main(String[] args) {
-		//여기 밑에서 assignment가 가능한 이유는 메인메소드 안에서기때문 뒤에 serviceImpl 봐바라
 		AccountBean account = null; //값이 없어야 만들수있기때문에 null, 공간만 만들어줌
 		MemberBean member = null; //과거에는 한명정보가 member에 저장됐지만 ServiceImpl에서 저장된다
 		AccountService accountService = new AccountServiceImpl();
@@ -19,7 +18,7 @@ public class Controller {
 							"종료 ..");
 					return;
 				case "1": // 회원가입
-					memberService.join( //Impl한테 값을 보내는 부분
+					memberService.join( //controller가 ServiceImpl한테 date를 준것
 							JOptionPane.showInputDialog("ID등록"), 
 							JOptionPane.showInputDialog("이름 등록"), 
 							JOptionPane.showInputDialog("주민번호 등록"), 
@@ -49,30 +48,13 @@ public class Controller {
 					JOptionPane.showMessageDialog(null,member.toString() );
 					break;
 				case "8":
-					MemberBean[] members = memberService.list();
-					JOptionPane.showMessageDialog(null, members);
 					
-					/*String temp = "";
-					for(int i=0; i<members.length;i++) {
-						temp += members[i]+"\n";
-					}*/
-					
-					JOptionPane.showMessageDialog(null,members);
 					break;
 				case "9" :
-					String id = JOptionPane.showInputDialog("검색할아이디입력");
-					JOptionPane.showMessageDialog(null, memberService.find(id));
+					
 					break;
 				case "10" :
-					id = JOptionPane.showInputDialog("로그인 아이디");
-					String pw = JOptionPane.showInputDialog("로그인 비번");
-					boolean ok = memberService.login(id, pw);
-					if(ok) {				//바로결과값받을수있는이유는 boolean이기때문에
-						JOptionPane.showMessageDialog(null, "로그인 성공");
-					}else {
-						JOptionPane.showMessageDialog(null, "로그인 실패");
-					}
-					//JOptionPane.showMessageDialog(null, (ok) ? "로그인성공" : "로그인실패");
+					
 					break;
 			}
 		}

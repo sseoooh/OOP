@@ -1,4 +1,4 @@
-package bank31;
+package bank99;
 
 public class MemberBean {
 	private String id,name,ssn,pass;

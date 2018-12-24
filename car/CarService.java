@@ -4,9 +4,11 @@ package car;
 	private int door; //문의갯수
  */
 public interface CarService {
-	public CarBean join(String color, String gearType, int door);
-	
-	public void color();
-	public void gearType();
-	public void door();
+	/*
+	 * 판매할 차량을 입고시킨다
+	 */
+	public abstract void add(String brand, String color, String gearType, int door);  //argment는 타입써줘야함 ex:String int
+	public void list();
+	public void find();
+	public void sell();
 }

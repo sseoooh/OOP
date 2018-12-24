@@ -1,7 +1,7 @@
-package bank31;
+package bank99;
 
 public class MemberServiceImpl implements MemberService{//MemberServiceImpl는 기능이라 getter/setter/쓰면안된다
-	private MemberBean[] members; // 여긴 필드니까 assignment불가능
+	private MemberBean[] members;//필드에서는 assignment사용못함 그리고 여기서 생성자를 생성하면 계속 값이 초기화된다
 	private int count; //은닉화하기위해 무조건 멤버변수가면 private///i의 이름은 count로 바꿔줬다
 	//필드에서는 상수를 제외한 어떤것도 사용못한다
 	MemberServiceImpl(){

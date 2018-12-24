@@ -10,7 +10,7 @@ public class MemberServiceImpl implements MemberService{
 		member.setPass(pass);
 		member.setSsn(ssn);
 		// TODO Auto-generated method stub
-		return null;
+		return member;
 	}
 
 	@Override

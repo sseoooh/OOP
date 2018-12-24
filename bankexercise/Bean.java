@@ -1,8 +1,7 @@
-package bank31;
+package bankexercise;
 
-public class MemberBean {
+public class Bean {
 	private String id,name,ssn,pass;
-	// 디폴트 생성자는 존재한다.
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -12,8 +11,8 @@ public class MemberBean {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getName() {// getter 게터
-		return name; // read
+	public String getName() {
+		return name;
 	}
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
@@ -29,10 +28,10 @@ public class MemberBean {
 	}
 	@Override
 	public String toString() {
-		return String.format("[회원정보]\n"
-					+ "ID: %s\n"
-					+ "이름: %s\n"
-					+ "주민번호: %s\n"
-					+ "비밀번호: %s", id,name,ssn, pass );
+		// TODO Auto-generated method stub
+		return String.format("아이디: %s\n"
+				+ "이름: %s\n"
+				+ "주민등록번호: %s\n"
+				+ "비밀번호",id, name, ssn, pass);
 	}
 }
