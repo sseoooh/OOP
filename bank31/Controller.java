@@ -23,8 +23,7 @@ public class Controller {
 							JOptionPane.showInputDialog("ID등록"), 
 							JOptionPane.showInputDialog("이름 등록"), 
 							JOptionPane.showInputDialog("주민번호 등록"), 
-							JOptionPane.showInputDialog("비번 등록")
-							);
+							JOptionPane.showInputDialog("비번 등록"));
 					break;
 				case "2":
 					JOptionPane.showMessageDialog(null,member.toString());

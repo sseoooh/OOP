@@ -21,20 +21,36 @@ public class ServiceImpl implements Service{
 	}
 
 	@Override
-	public void list() {
+	public Bean[] list() {
 		// TODO Auto-generated method stub
+		return beans;
 		
 	}
 
 	@Override
-	public void find() {
+	public Bean find(String id) {
+		Bean bean = new Bean();
+		for(int i=0;i<count;i++) {
+			if(beans[i].getId().equals(id)) {
+				bean = beans[i];
+				break;
+			}
+		}
 		// TODO Auto-generated method stub
-		
+		return bean;
 	}
 
 	@Override
-	public void login() {
+	public boolean login(String id, String pw) {
 		// TODO Auto-generated method stub
+		boolean ok = false;
+		for(int i =0;i<count;i++) {
+			if(beans[i].getId().equals(id) && beans[i].getId().equals(pw)) {
+				ok = true;
+			}
+		}
+	return ok;
+		
 		
 	}
 
